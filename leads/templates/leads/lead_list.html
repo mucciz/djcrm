@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>
+    All the leads listed
+</h1>
+<ul>
+    {% for lead in leads %}
+    <li> <a href="{{ lead.get_absolute_url }}"> {{ lead.first_name }} {{ lead.last_name }} </a> , {{ lead.age }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
