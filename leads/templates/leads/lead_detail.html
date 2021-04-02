@@ -3,8 +3,12 @@
 <h1>
     Lead Detail
 </h1>
-<a href="{% url 'leads:lead_list' %}">Go back</a>
+<a href="{% url 'leads:lead_list' %}">Go back</a> 
+<p>
+    👨  Agent for the lead is {{ lead.agent }}
+</p>
 <p>
     {{ lead }}, {{ lead.age }}
 </p>
+<a href="{% url 'leads:lead_update' lead.pk %}"> Update lead</a> or <a href="{% url 'leads:lead_delete' lead.pk %}">Delete lead</a>
 {% endblock %}
