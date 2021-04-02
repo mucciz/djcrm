@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Welcome to Django CRM</h1>
+    <a href="{% url 'leads:lead_list' %}">View Leads</a>
+{% endblock content %}
