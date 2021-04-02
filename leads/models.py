@@ -13,8 +13,8 @@ class Lead(models.Model):
     age = models.IntegerField(default=0)
     agent = models.ForeignKey('Agent', on_delete=models.CASCADE)
 
-    # def get_absolute_url(self):
-    #     return reverse('leads:lead_detail', args=[self.pk])
+    def get_absolute_url(self):
+        return reverse('leads:lead_detail', args=[self.pk])
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
 
