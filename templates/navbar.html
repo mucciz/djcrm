@@ -1,0 +1,11 @@
+<header>
+    <span>Navbar goes here: </span>
+    {% if request.user.is_authenticated %}
+        <span>Logged-In as {{ request.user.username }}</span>
+        <a href="{% url 'logout' %}">Log-Out 🔻 </a>
+    {% else %}
+    <a href="{% url 'login' %}">Log-In 👉 </a>
+    <span> or </span>
+    <a href="{% url 'sign_up' %}">Sign-Up 📲    </a>
+    {% endif %}
+</header>

@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    {% include 'navbar.html' %}
     <a href="{% url 'landing_page' %}">DjCRM Home</a>
     {% block content %}
     {% endblock %}
